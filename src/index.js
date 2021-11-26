@@ -1,13 +1,23 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import AppBar from './Component/AppBar/appBar';
+import { configureStore  } from '@reduxjs/toolkit'
+import { fetchUserById } from './redux/test';
+import { Provider } from 'react-redux'
+import { reducer } from './redux/test';
+export const store = configureStore({
+  reducer: {
+   reducer
+  },
+})
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Provider store={store}>
+      <AppBar />
+    </Provider>
+
+  ,
   document.getElementById('root')
 );
 

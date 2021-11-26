@@ -2,20 +2,34 @@
   "name": "coinmarketcap",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+  },
   "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.1.1",
     "@mui/material": "^5.1.0",
     "@reduxjs/toolkit": "^1.6.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/user-event": "^12.1.10",
     "@types/react": "^17.0.34",
+    "axios": "^0.24.0",
+    "babel-jest": "^27.3.1",
+    "currency-symbol-map": "^5.0.1",
     "history": "5",
     "react": "^17.0.2",
+    "react-crypto-icons": "^1.0.5",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.rea2.6",
     "react-router-dom": "6",
     "react-scripts": "4.0.3",
-    "typescript": "^4.4.4",
+    "react-world-flags": "^1.4.0",
+    "typescript": "^4.5.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -23,12 +37,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -43,7 +51,16 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.11.1",
     "@testing-library/react": "^12.1.2",
-    "msw": "^0.35.0"
+    "@types/jest": "^27.0.3",
+    "@types/react-world-flags": "^1.4.2",
+    "dts-jest": "^24.0.0",
+    "jest-watch-typeahead": "0.6.5",
+    "msw": "^0.35.0",
+    "ts-jest": "^27.0.7"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
